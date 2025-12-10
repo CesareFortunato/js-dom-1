@@ -9,6 +9,8 @@ const lamp = document.getElementById("lampImg");
 
 /* button.addEventListener('click', switchButton); */
 
+//https://stackoverflow.com/questions/25028853/addeventlistener-two-functions
+
 button.addEventListener('click', () => {
     switchButton();
     switchLamp();

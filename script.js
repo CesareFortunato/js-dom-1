@@ -1,12 +1,18 @@
 //VARIABLES
 
 const button = document.querySelector('button');
+const lamp = document.getElementById("lampImg");
 
 
 
 //SYSTEM
 
-button.addEventListener('click', testButton);
+/* button.addEventListener('click', switchButton); */
+
+button.addEventListener('click', () => {
+    switchButton();
+    switchLamp();
+})
 
 
 
@@ -14,7 +20,7 @@ button.addEventListener('click', testButton);
 //FUNCTION
 
 
-/* function testButton(){
+/* function switchButton(){
     if(button.innerHTML.includes("ON")){
         button.innerHTML = "OFF"
     }   
@@ -23,9 +29,14 @@ button.addEventListener('click', testButton);
     }
 } */
 
-function testButton() {
+function switchButton() {
     button.innerHTML = button.innerHTML.includes("ON") ? "OFF" : "ON";
 }
+
+function switchLamp(){
+    lamp.src = lamp.src.includes("white_lamp.png") ? "./imgs/yellow_lamp.png" : "./imgs/white_lamp.png"; 
+}
+
 
 
 
